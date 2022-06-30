@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string> 
 #include <cstdlib>
-
+#include <vector>
 using namespace std;
 
 class requestGeneration {
@@ -19,6 +19,24 @@ class requestGeneration {
             cout << stringUnits << " units requested " << endl;
             return units;
         }
+
+        int setID() {
+            // every time this method is called the process id increments by one and returns the new ID
+            processID++;
+            return processID;
+        }
+        void allocationRequest() {
+            vector<int> procID;
+            vector<int> memUnits;
+            
+            // generating 100 request, each request has a process id and a number of memory units requested
+            for(int i = 0; i < 100; i++) {
+                procID.push_back(setID());
+                memUnits.push_back(setUnits());
+            }
+
+        }
+
 
 
 };
