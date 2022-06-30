@@ -10,7 +10,6 @@ struct Node {
 struct Node* head = NULL;
 
 
-
 void AddToMemory(int newdata) {
    struct Node* newnode = (struct Node*) malloc(sizeof(struct Node));
    newnode->data = newdata;
@@ -22,7 +21,7 @@ void AddToMemory(int newdata) {
 }
 
 
-void ShowMemory() {
+void traverse() {
    struct Node* ptr;
    ptr = head;
    while(ptr != NULL) {
@@ -39,6 +38,6 @@ int main() {
     }
     
    cout<<"The doubly linked list is: ";
-   ShowMemory();
+   traverse();
    return 0;
 }
