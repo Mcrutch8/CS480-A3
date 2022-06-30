@@ -3,16 +3,17 @@ using namespace std;
 
 
 struct Node {
-   int data;
+   // 2KB size for each block
+   int size;
    struct Node *prev;
    struct Node *next;
 };
 struct Node* head = NULL;
 
 
-void AddToMemory(int newdata) {
+void AddToMemory(int newSize) {
    struct Node* newnode = (struct Node*) malloc(sizeof(struct Node));
-   newnode->data = newdata;
+   newnode->size = newSize;
    newnode->prev = NULL;
    newnode->next = head;
    if(head != NULL)
@@ -25,7 +26,7 @@ void traverse() {
    struct Node* ptr;
    ptr = head;
    while(ptr != NULL) {
-      cout<< ptr->data <<" ";
+      cout<< ptr->size <<" ";
       ptr = ptr->next;
    }
 
