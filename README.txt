@@ -68,7 +68,9 @@ int deallocate_mem(int process_id):
 
 
 Known bugs:
-Does not work for multiple pipes 
+Waiting till finished for this 
 
 Lessons learned:
-Learned about piping in c++ and how pipes connect two processes for inter-process communication. 
+During this Assignment we learned a lot about memory allocation request and deallocation request. This Assignment
+also gave us a better general idea of how memory works as a whole. We also learned how best fit and first fit algorithms
+work and what their similarities and differences are.  
